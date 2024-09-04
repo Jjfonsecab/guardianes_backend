@@ -1,4 +1,4 @@
-package com.guardianes.entity;
+package com.guardianes.entity.usuario;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
@@ -32,7 +32,7 @@ public class Usuario {
     @Size(min = 6, message = "La contraseña debe tener al menos 6 caracteres")
     private String contraseña;
     @Enumerated(EnumType.STRING)
-    private TipoUsuario tipoUsuario;
+    private Rol rol;
     @Column(name = "activo")
     private boolean active ;
 }
